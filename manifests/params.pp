@@ -196,6 +196,28 @@ class ldap::params {
       $net_ldap_package_name     = 'net-ldap'
       $net_ldap_package_provider = 'gem'
     }
+    'Archlinux': {
+      $ldap_config_directory     = '/etc/openldap'
+      $os_config_directory       = '/etc/default'
+      $server_backend            = 'bdb'
+      $server_run_directory      = '/var/run/slapd'
+      $server_run_directory_mode = '0700'
+
+      $client_package_name       = 'libldap'
+
+      $ldapowner                 = 'openldap'
+      $ldapgroup                 = 'openldap'
+
+      $server_package_name       = 'slapd'
+      $server_service_name       = 'slapd'
+      $server_default_file       = "${os_config_directory}/slapd"
+      $server_default_file_mode  = '0644'
+      $server_default_template   = 'ldap/archlinux/defaults.erb'
+      $server_directory          = '/var/lib/ldap'
+      $server_directory_mode     = '0700'
+      $net_ldap_package_name     = 'ruby-net-ldap'
+      $net_ldap_package_provider = 'pacman'
+    }
     default: {
       fail("${::operatingsystem} not supported")
     }
