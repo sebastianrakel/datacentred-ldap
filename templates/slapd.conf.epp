@@ -16,7 +16,7 @@ allow bind_v2
 <% } -%>
 
 # Schemas
-<% $schemas.concat($extra_schemas).each -%>
+<% $schemas.each -%>
 <% |$schema| { %> include <%= $schema_directory %>/<%= $schema %>.schema
 <% } -%>
 
