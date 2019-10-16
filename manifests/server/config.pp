@@ -42,7 +42,7 @@ class ldap::server::config inherits ldap::server {
     group   => $ldap::server::ldapgroup,
     # may contain passwords
     mode    => $ldap::server::config_file_mode,
-    content => template($ldap::server::config_template),
+    content => epp($ldap::server::config_template),
   }
 
   if $ldap::server::default_file {
