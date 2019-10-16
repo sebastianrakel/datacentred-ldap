@@ -25,7 +25,7 @@ class ldap::params {
   $server_service_enable      = true
   $server_service_ensure      = 'running'
   $server_service_manage      = true
-  $server_config_template     = 'ldap/slapd.conf.erb'
+  $server_config_template     = 'ldap/slapd.conf.epp'
 
   $server_log_level = 'none'
 
