@@ -16,7 +16,7 @@ allow bind_v2
 <% } -%>
 
 # Schemas
-<% $ldap::server_schemas.each -%>
+<% $server_schemas.each -%>
 <% |$schema| { %> include <%= $schema_directory %>/<%= $schema %>.schema
 <% } -%>
 
