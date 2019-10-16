@@ -16,15 +16,8 @@ allow bind_v2
 <% } -%>
 
 # Schemas
-<% $server_schemas.each -%>
-<% |$schema| { %> include <%= $schema_directory %>/<%= $schema %>.schema
-<% } -%>
-
 # Modules
 moduleload back_<%= $backend %>
-<% $modules.each -%>
-<% |$module| { %> moduleload <%= $module %>
-<% } -%>
 
 <% if $config { -%>
 # Define a config database (cn=config)
