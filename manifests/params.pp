@@ -210,7 +210,7 @@ class ldap::params {
 
       $server_package_name       = 'slapd'
       $server_service_name       = 'slapd'
-      $server_default_file       = Undef
+      $server_default_file       = undef
       $server_default_file_mode  = '0644'
       $server_default_template   = 'ldap/archlinux/defaults.erb'
       $server_directory          = '/var/lib/ldap'
