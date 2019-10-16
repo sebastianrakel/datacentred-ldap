@@ -208,7 +208,7 @@ class ldap::params {
       $ldapowner                 = 'openldap'
       $ldapgroup                 = 'openldap'
 
-      $server_package_name       = 'slapd'
+      $server_package_name       = 'openldap'
       $server_service_name       = 'slapd'
       $server_default_file       = undef
       $server_default_file_mode  = '0644'
