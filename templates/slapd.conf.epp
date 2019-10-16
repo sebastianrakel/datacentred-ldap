@@ -1,5 +1,5 @@
 # Server Configuration
-pidfile  <%= $pidfile %>
+pidfile  <%= $ldap::pidfile %>
 argsfile <%= $argsfile %>
 loglevel <%= $log_level %>
 
